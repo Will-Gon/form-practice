@@ -6,7 +6,7 @@ import Card from '../UI/Card'
 import ErrorModal from '../UI/ErrorModal';
 import classes from './Form.module.css';
 
-const Form = () => {
+const Form = (props) => {
     const [enteredName, setEnteredName] = useState('');
     const [enteredLastName, setEnteredLastName] = useState('');
     const [enteredAge, setEnteredAge] = useState('');
@@ -21,14 +21,14 @@ const Form = () => {
             });
             return;
         };
-        if (enteredAge > 13) {
+        if (+enteredAge > 13) {
             setError({
                 title: 'Invalid Age',
                 message: 'Please enter a valid age (> 13).'
             });
             return;
         };
-        console.log('oops');
+        props.onAddPlayer(enteredName, enteredLastName, enteredAge);
         setEnteredName('');
         setEnteredLastName('');
         setEnteredAge('');

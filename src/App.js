@@ -9,8 +9,9 @@ function App() {
 
   const addPlayerHandler = (pName, pLastName, pAge) => {
     setPlayersList((prevPlayersList) => {
-      return [...prevPlayersList, { name: pName, lastName: pLastName, Age: pAge, id: Math.random().toString }]
+      return [...prevPlayersList, { name: pName, lastName: pLastName, age: pAge, id: Math.random().toString() }]
     });
+    console.log(playersList)
   };
 
   return (
