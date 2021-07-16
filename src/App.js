@@ -11,7 +11,6 @@ function App() {
     setPlayersList((prevPlayersList) => {
       return [...prevPlayersList, { name: pName, lastName: pLastName, age: pAge, id: Math.random().toString() }]
     });
-    console.log(playersList)
   };
 
   return (
