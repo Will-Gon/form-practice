@@ -5,8 +5,8 @@ const PlayersList = (props) => {
         <div>
             <ul>
                 {props.players.map(player => {
-                    return <li>
-                        {player.name} {player.lastName} ({player.aye} years old.)
+                    return <li key={player.id}>
+                        {player.name} {player.lastName} ({player.age} years old.)
                     </li>
                 })}
             </ul>
