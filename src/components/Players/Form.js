@@ -4,6 +4,7 @@ import Wrapper from '../Helpers/Wrapper';
 import Button from '../UI/Button'
 import Card from '../UI/Card'
 import ErrorModal from '../UI/ErrorModal';
+import classes from './Form.module.css';
 
 const Form = () => {
     const [enteredName, setEnteredName] = useState('');
@@ -55,7 +56,7 @@ const Form = () => {
     return (
         <Wrapper>
             {error && <ErrorModal title={error.title} message={error.message} onClose={closeModal}/>}
-            <Card>
+            <Card className={classes.input}>
                 <form onSubmit={addPLayer}>
                     <label htmlFor='name'>Name:</label>
                     <input type='text' value={enteredName} onChange={nameChangeHandler}></input>

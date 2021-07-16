@@ -1,8 +1,11 @@
 import React from 'react';
 
+import Card from '../UI/Card'
+import classes from './PlayersList.module.css';
+
 const PlayersList = (props) => {
     return (
-        <div>
+        <Card className={classes.players}>
             <ul>
                 {props.players.map(player => {
                     return <li key={player.id}>
@@ -10,7 +13,7 @@ const PlayersList = (props) => {
                     </li>
                 })}
             </ul>
-        </div>
+        </Card>
     )
 };
 

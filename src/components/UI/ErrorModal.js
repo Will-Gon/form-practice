@@ -9,7 +9,7 @@ const ErrorModal = (props) => {
         <div>
             <div className={classes.backdrop} onClick={props.onClose}>
                 <Card className={classes.modal}>
-                    <header classes={classes.header}>
+                    <header className={classes.header}>
                         <h2>{props.title}</h2>
                     </header>
                     <div className={classes.content}>
