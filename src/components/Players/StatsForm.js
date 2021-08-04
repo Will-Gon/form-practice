@@ -1,12 +1,14 @@
 import React from 'react';
+import Button from '../UI/Button'
 
 const StatsForm = (props) => {
     return (
         <form>
-            <label></label>
+            <label>TouchDowns</label>
             <input></input>
-            <label></label>
+            <label>Catches</label>
             <input></input>
+            <Button>Close</Button>
         </form>
     )
 };
